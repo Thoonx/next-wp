@@ -1,4 +1,3 @@
-const endpoint = 'https://antuncrnja.com/blearn/wp-json/wp/v2/posts/'
 import Container from '../../components/Container'
 import Head from 'next/head'
 
