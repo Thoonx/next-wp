@@ -15,10 +15,10 @@ export async function getStaticProps(){
   }
 }
 
-export default function Home({ pages }) {
- console.log(pages)
-  return (
-    <div className={styles.container}>
+const WpHome = ({ pages }) => (
+  
+    <div>
+  {console.log(pages)}    
       <Head>
         <title>Next WP</title>
         <link rel="icon" href="/favicon.ico" />
@@ -27,11 +27,12 @@ export default function Home({ pages }) {
       <Container key={pages.id}>
         
         <h1 style={{ color: pages[0].acf.color}}>{ pages[0].acf.proba}</h1>
-		<img src={pages[0].acf.slika1}/>
+		   <img src={pages[0].acf.slika1}/>
        
        
       </Container>
 
     </div>
   )
-}
+
+  export default WpHome

@@ -9,7 +9,7 @@ export async function getStaticProps(){
   const res = await fetch('https://antuncrnja.com/blearn/wp-json/wp/v2/posts?per_page=2&page=1&_embed');
   const posts = await res.json();
 
-  //custom blog plugin: Custom Post type UI - show in REST API & create custom REST API base slug
+  //custom blog // plugin: Custom Post type UI - show in REST API & create custom REST API base slug
   const blogRes = await fetch('https://antuncrnja.com/blearn//wp-json/wp/v2/custom-blog?per_page=3');
   const blog = await blogRes.json();
 
@@ -21,11 +21,8 @@ export async function getStaticProps(){
   }
 }
 
-export default function Home({ posts, blog }) {
- 
-  return (
-   
-   
+const Home = ({ posts, blog }) => (
+
     <div className={styles.container} key={posts.id}>
       <Head>
         <title>Next WP</title>
@@ -67,21 +64,23 @@ export default function Home({ posts, blog }) {
 
         <Flex>
           {blog.map(x => {
-            console.log(x)
+            console.log('custom blog post: ', x)
               return (
-                <>
+                
+                <Card key={ x.id }>
                   <Link href={ `/blog/${ x.id }` }>
                     <a  href={ `/blog/${ x.id }` }>
 
-                <Card key={ x.id }>
+                
                 
                   <h3>{x.title.rendered}</h3>
                   <img src={ x.better_featured_image.media_details.sizes.medium.source_url}/>
                 
-                </Card>
-          </a>
+                  </a>
           </Link>
-                </>
+                </Card>
+         
+              
               )
             })}
         </Flex>
@@ -90,4 +89,5 @@ export default function Home({ posts, blog }) {
 
     </div>
   )
-}
+
+  export default Home

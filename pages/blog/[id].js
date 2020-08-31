@@ -2,27 +2,6 @@ const endpoint = 'https://antuncrnja.com/blearn/wp-json/wp/v2/posts/'
 import Container from '../../components/Container'
 import Head from 'next/head'
 
-function BlogPage({ blog }) {
-
-
-  return (
-<>
-<Head>
-  <title>{blog.title.rendered}</title>
-</Head>
-
-      <Container key={ blog.id }>
-		  <img style={{width: 500}}  src={ blog.better_featured_image.source_url }/> {/*WP PLUGIN: Better REST API Featured Images*/}
-		  
-		<h2>{blog.title.rendered }</h2>
-	
-		<h2>acf css: {blog.acf.css }</h2> {/*WP PLUGIN: ACF to REST-API*/}
-		<div dangerouslySetInnerHTML={ {__html: blog.content.rendered } } />
-      </Container>
-</>
-  )
-}
-
 
 export async function getServerSideProps({ query }){
 
@@ -33,6 +12,25 @@ export async function getServerSideProps({ query }){
 	
 	  return { props: {blog} }
 	}
+
+
+const BlogPage = ({ blog }) => (
+
+		<>
+		<Head>
+		<title>{blog.title.rendered}</title>
+		</Head>
+
+			<Container key={ blog.id }>
+				<img style={{width: 500}}  src={ blog.better_featured_image.source_url }/> {/*WP PLUGIN: Better REST API Featured Images*/}
+				
+				<h2>{blog.title.rendered }</h2>
+			
+				<h2>acf css: {blog.acf.css }</h2> {/*WP PLUGIN: ACF to REST-API*/}
+				<div dangerouslySetInnerHTML={ {__html: blog.content.rendered } } />
+			</Container>
+		</>
+  )
 
 	export default BlogPage
 

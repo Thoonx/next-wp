@@ -20,9 +20,8 @@ export async function getStaticProps(){
   }
 }
 
-export default function Home({ posts }) {
+const Posts = ({ posts }) => (
  
-  return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -59,4 +58,6 @@ export default function Home({ posts }) {
 
     </div>
   )
-}
+
+
+export default Posts
