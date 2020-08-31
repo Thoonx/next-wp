@@ -5,7 +5,7 @@ const Container = ({children}) => (
 		<style jsx>{`
 				div{
 					max-width: 1200px;
-					margin: 0 auto;
+					margin: 100px auto;
 				}
 				
 		`}</style>

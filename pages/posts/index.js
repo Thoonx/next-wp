@@ -36,9 +36,9 @@ const Posts = ({ posts }) => (
 
          return (
             
-            <Card>    
+            <Card key= { post.id }>    
               <Link href={ `/posts/${ post.id }` }>
-                <a key= { post.id } href={ `/posts/${ post.id }` }>
+                <a href={ `/posts/${ post.id }` }>
                       <h3 >{ post.title.rendered }</h3>
                         <small>{ post.date.replace('T', ' ') }</small>
 
