@@ -8,7 +8,7 @@ const Nav = () => (
 
         <style jsx>{`
         ul{
-            background: #381798;
+            background: #3d40f2;
             color: white;
             display: inline-block;
             margin: 0;
@@ -17,7 +17,7 @@ const Nav = () => (
             position: fixed;
             top: 20px;
             left: 20px;
-            box-shadow: 9px 15px 23px #38179852;
+            box-shadow: 9px 15px 23px #3d40f252;
         }    
 
         ul li{
@@ -26,8 +26,8 @@ const Nav = () => (
             display: inline-block;
         }
         ul li:nth-child(even){
-            border-left: 1px solid #2b2b2b;
-            border-right: 1px solid #2b2b2b;
+            border-left: 1px solid #5254ff;
+    border-right: 1px solid #5254ff;
         }
         `}</style>
     </ul>
