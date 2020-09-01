@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const frontRes = await fetch('https://antuncrnja.com/blearn/wp-json/wp/v2/pages?search=naslovna');
   const front = await frontRes.json();
 

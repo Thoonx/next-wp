@@ -5,7 +5,7 @@ import Flex from '../components/Flex'
 import Link from 'next/link'
 import Card from '../components/Card'
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const res = await fetch('https://antuncrnja.com/blearn/wp-json/wp/v2/posts?per_page=2&page=1&_embed');
   const posts = await res.json();
 
