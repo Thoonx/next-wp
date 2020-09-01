@@ -17,7 +17,7 @@ export async function getServerSideProps({ query }){
 		<title>{post.title.rendered}</title>
 		</Head>
 			<Container key={ post.id }>
-				<img style={{width: 500}}  src={ post.better_featured_image.source_url }/> {/*WP PLUGIN: Better REST API Featured Images*/}
+				<img style={{width: '100%'}}  src={ post.better_featured_image.source_url }/> {/*WP PLUGIN: Better REST API Featured Images*/}
 				{console.log(post)}
 				<h2>{post.title.rendered }</h2>
 			

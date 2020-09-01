@@ -39,7 +39,7 @@ const Home = ({ posts, blog }) => (
               return (
                 
                 <Card key={ post.id }>    
-                  <Link href={ `/posts/${ post.id }` }>
+                  <Link href={ `/posts/${ post.id }` } prefetch={true}>
                     <a  href={ `/posts/${ post.id }` }>
                           <h3 >{ post.title.rendered }</h3>
 

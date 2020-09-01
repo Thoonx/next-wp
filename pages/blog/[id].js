@@ -21,7 +21,7 @@ const BlogPage = ({ blog }) => (
 		</Head>
 
 			<Container key={ blog.id }>
-				<img style={{width: 500}}  src={ blog.better_featured_image.source_url }/> {/*WP PLUGIN: Better REST API Featured Images*/}
+				<img style={{width: '100%'}}  src={ blog.better_featured_image.source_url }/> {/*WP PLUGIN: Better REST API Featured Images*/}
 				
 				<h2>{blog.title.rendered }</h2>
 			
