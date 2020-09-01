@@ -10,7 +10,7 @@ export async function getStaticProps(){
   const posts = await res.json();
 
   //custom blog // plugin: Custom Post type UI - show in REST API & create custom REST API base slug
-  const blogRes = await fetch('https://antuncrnja.com/blearn//wp-json/wp/v2/custom-blog?per_page=3');
+  const blogRes = await fetch('https://antuncrnja.com/blearn/wp-json/wp/v2/custom-blog?per_page=3');
   const blog = await blogRes.json();
 
   return {
@@ -74,7 +74,7 @@ const Home = ({ posts, blog }) => (
                 
                 
                   <h3>{x.title.rendered}</h3>
-                  <img src={ x.better_featured_image.media_details.sizes.medium.source_url}/>
+                  
                 
                   </a>
           </Link>

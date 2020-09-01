@@ -6,7 +6,7 @@ export async function getServerSideProps({ query }){
 
 	const { id } = query;
 	 //custom blog plugin: Custom Post type UI - show in REST API & create custom REST API base slug
-	 const blogRes = await fetch(`https://antuncrnja.com/blearn//wp-json/wp/v2/custom-blog/${id}`);
+	 const blogRes = await fetch(`https://antuncrnja.com/blearn/wp-json/wp/v2/custom-blog/${id}`);
 	 const blog = await blogRes.json();
 	
 	  return { props: {blog} }
